@@ -1,0 +1,27 @@
+{
+  "name": "node-factorial",
+  "version": "1.0.0",
+  "description": "rest api de factorial de un numero",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hossvel/node-factorial.git"
+  },
+  "keywords": [
+    "node",
+    "factorial"
+  ],
+  "author": "hhvelascoa@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "bugs": {
+    "url": "https://github.com/hossvel/node-factorial/issues"
+  },
+  "homepage": "https://github.com/hossvel/node-factorial#readme"
+}
