@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+var operaciones = require('./operaciones');
 // create express app
 const app = express();
 
@@ -14,8 +14,9 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.json("Hola Mundo!!");
 });
-app.get('/factorial/:numero', function(req, res, next) {
-    res.json(1000);
+
+app.get('/factorial/:numero', function(req, res) {
+    res.json(operaciones.factorialRecursivo(req.params.numero));    
 });
 
 
