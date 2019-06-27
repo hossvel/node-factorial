@@ -16,4 +16,9 @@ pm2 start ecosystem.config.js
 # Levantar el proyecto con una imagen de docker pm2
     docker build -t factorialnode .
 # run la imagen
-    docker run -p 3000:3000 factorialnode
+    docker run -p 3000:3000 -d factorialnode
+
+# Generar imagen docker sin pm2
+    docker build -t dockerfactorialnode .
+# RUN imagen generada 
+docker run -p 3000:3000 -d dockerfactorialnode
