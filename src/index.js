@@ -15,8 +15,20 @@ app.get('/', (req, res) => {
     res.json("Hola Mundo!!");
 });
 
-app.get('/factorial/:numero', function(req, res) {
-    res.json(operaciones.factorialRecursivo(req.params.numero));    
+app.get('/factorial/:numero', function(req, res) {   
+    if(isNaN(req.params.numero) || parseInt(req.params.numero) < 0) {
+    res.json({
+        numero:req.params.numero,
+        resultado:"Numero Invalido!!",
+        version:"1.0"
+    });    
+}
+
+    res.json({
+        numero:req.params.numero,
+        resultado:operaciones.factorialRecursivo(req.params.numero),
+        version:"1.0"
+    });    
 });
 
 
