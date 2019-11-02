@@ -4,7 +4,9 @@
   "description": "rest api de factorial de un numero",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "start": "node src/index.js",
+    "test": "mocha"
+    
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.16.3",
+    "mocha": "^6.2.2"
   },
   "bugs": {
     "url": "https://github.com/hossvel/node-factorial/issues"

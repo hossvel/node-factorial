@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: localhpatest
+  labels:
+    component: localhpatest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: "localhpatest"
+  template:
+    metadata:
+      labels:
+        component: "localhpatest"
+    spec:
+      containers:
+        - name: localhpatest
+          image: "hhvelascoa/factorialnode:1.0"
+          imagePullPolicy: "IfNotPresent"
+          ports:
+          - name: http
+            containerPort: 3000
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits: 
+              cpu: "100m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /factorial
+              port: http
+            timeoutSeconds: 5
+            initialDelaySeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /factorial
+              port: http
+            timeoutSeconds: 5
+            initialDelaySeconds: 20
