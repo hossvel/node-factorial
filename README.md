@@ -1,5 +1,5 @@
-# node-factorial
-## rest api factorial
+# Node-factorial
+## Rest api factorial
 
 curl http://localhost:3000/factorial/5
 
