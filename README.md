@@ -22,5 +22,5 @@ pm2 start ecosystem.config.js
     docker build -t dockerfactorialnode .
 # RUN imagen generada 
 docker run -p 3000:3000 -d dockerfactorialnode
-# RUN TEST
+# RUN Test
 npm test
