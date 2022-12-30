@@ -23,7 +23,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "express": "^4.16.3",
-    "mocha": "^6.2.2"
+    "mocha": "^10.2.0"
   },
   "bugs": {
     "url": "https://github.com/hossvel/node-factorial/issues"
